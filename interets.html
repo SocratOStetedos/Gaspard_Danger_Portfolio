@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaspard Danger — Intérêts</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/logouniv.png">
+  <style>
+    .interest-full {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      transition: var(--transition);
+    }
+    .interest-full:hover {
+      border-color: rgba(0,212,255,0.3);
+      box-shadow: var(--glow);
+    }
+    .interest-full-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-lg);
+      background: rgba(0,212,255,0.08);
+      border: 1px solid rgba(0,212,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+    .interest-full-title {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-bright);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .interest-full-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+    .interest-full-body a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .interest-full-body a:hover { text-decoration: underline; }
+    .interest-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+    @media (max-width: 520px) {
+      .interest-full { grid-template-columns: 1fr; }
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .stat-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+    }
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">Gaspard Danger</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Mon CV</a></li>
+    <li><a href="projets.html">Mes Projets</a></li>
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="interets.html" class="active">Intérêts</a></li>
+    <li><a href="liens.html">Liens utiles</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+
+  <!-- HEADER -->
+  <div style="padding: 3rem 0 2rem;" class="fade-up">
+    <div class="hero-label">Centres d'intérêt</div>
+    <h1 style="font-family: var(--font-head); font-size: clamp(2rem,5vw,3.5rem); font-weight: 800; color: var(--text-bright); letter-spacing:-0.03em; margin-bottom:0.5rem;">
+      Qui je suis hors du code
+    </h1>
+    <p style="color: var(--text-muted); max-width: 540px; line-height:1.7;">
+      Mes passions et engagements qui façonnent ma rigueur, mon esprit d'équipe
+      et ma résilience au quotidien.
+    </p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-row fade-up mb-4">
+    <div class="stat-card">
+      <div class="stat-value">2 ans</div>
+      <div class="stat-label">Musculation</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">3⭐</div>
+      <div class="stat-label">Football club</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">♟️</div>
+      <div class="stat-label">Joueur d'échecs</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">🏃</div>
+      <div class="stat-label">Course nature</div>
+    </div>
+  </div>
+
+  <!-- MUSCULATION -->
+  <section class="fade-up fade-up-1">
+    <div class="interest-full">
+      <div class="interest-full-icon">💪</div>
+      <div>
+        <div class="interest-full-title">Musculation</div>
+        <p class="interest-full-body">
+          J'ai découvert la musculation il y a deux ans à Aigrefeuille-sur-Maine avec l'association sportive 
+          <em>Club Alpha</em>. C'est pour moi bien plus qu'un sport : une discipline qui développe la persévérance, 
+          la rigueur et le dépassement de soi. À travers des séances régulières, je travaille autant ma force 
+          physique que mentale. Je pratique maintenant à 
+          <a href="https://www.basic-fit.com/" target="_blank">Basic-Fit</a> à Lannion, après les cours — 
+          ce qui me force à organiser mes journées avec méthode.
+        </p>
+        <div class="interest-skills">
+          <span class="tag">Discipline</span>
+          <span class="tag">Régularité</span>
+          <span class="tag">Dépassement de soi</span>
+          <span class="tag">Gestion du stress</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTBALL -->
+  <section class="fade-up fade-up-2">
+    <div class="interest-full">
+      <div class="interest-full-icon">⚽</div>
+      <div>
+        <div class="interest-full-title">Football</div>
+        <p class="interest-full-body">
+          Le football m'a appris à travailler en équipe, à communiquer, à m'adapter rapidement 
+          aux situations de jeu et à gérer la pression collective. J'ai pratiqué deux ans au club 
+          <a href="https://www.fccv44.fr/" target="_blank">FCCV</a> 
+          (Football Club Coteaux du Vignoble). Ces compétences d'équipe se transposent directement 
+          dans les projets scolaires et professionnels.
+        </p>
+        <div class="interest-skills">
+          <span class="tag">Esprit d'équipe</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Gestion de la pression</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE À PIED -->
+  <section class="fade-up fade-up-3">
+    <div class="interest-full">
+      <div class="interest-full-icon">🏃</div>
+      <div>
+        <div class="interest-full-title">Course à pied</div>
+        <p class="interest-full-body">
+          Je cours dans le cadre naturel de 
+          <a href="https://www.pontcaffino.fr/" target="_blank">Pont Caffino</a>, 
+          un lieu idéal pour allier sport et évasion. La course à pied développe ma résistance, 
+          ma discipline et ma capacité à relever des défis personnels. L'effort régulier m'aide 
+          à mieux gérer le stress — des qualités que j'applique dans ma vie académique.
+        </p>
+        <div class="interest-skills">
+          <span class="tag">Endurance</span>
+          <span class="tag">Résilience</span>
+          <span class="tag">Connexion nature</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IFAC -->
+  <section class="fade-up fade-up-4">
+    <div class="interest-full">
+      <div class="interest-full-icon">🤝</div>
+      <div>
+        <div class="interest-full-title">IFAC — Animation bénévole</div>
+        <p class="interest-full-body">
+          Mon engagement au sein de 
+          <a href="https://www.ifac.asso.fr/" target="_blank">l'IFAC</a> 
+          (Institut de Formation, d'Animation et de Conseil), association d'accompagnement des jeunes 
+          en Loire-Atlantique, m'a permis de développer des compétences en communication, organisation 
+          et gestion de groupe. Préparer des soirées et animer des activités m'a sensibilisé à la 
+          solidarité et à l'engagement citoyen.
+        </p>
+        <div class="interest-skills">
+          <span class="tag tag-purple">Animation</span>
+          <span class="tag tag-purple">Bénévolat</span>
+          <span class="tag tag-purple">Organisation</span>
+          <span class="tag tag-purple">Responsabilité</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉCHECS -->
+  <section class="fade-up">
+    <div class="interest-full">
+      <div class="interest-full-icon">♟️</div>
+      <div>
+        <div class="interest-full-title">Jeux de stratégie — Échecs</div>
+        <p class="interest-full-body">
+          Les échecs m'ont appris la logique, l'anticipation et la patience. Analyser la position, 
+          prévoir les coups adverses, gérer le temps sous pression — autant de compétences qui 
+          résonnent directement avec la résolution de problèmes en informatique et la cybersécurité.
+        </p>
+        <div class="interest-skills">
+          <span class="tag tag-green">Logique</span>
+          <span class="tag tag-green">Anticipation</span>
+          <span class="tag tag-green">Pensée stratégique</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Gaspard Danger · Portfolio · <a href="mailto:gaspard.danger@gmail.com">gaspard.danger@gmail.com</a></p>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaspard Danger — Liens utiles</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/logouniv.png">
+  <style>
+    .links-category {
+      margin-bottom: 3rem;
+    }
+    .links-category-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .link-card {
+      position: relative;
+    }
+    .link-featured {
+      border-color: rgba(0,212,255,0.35) !important;
+      background: linear-gradient(135deg, var(--surface), rgba(0,212,255,0.03));
+    }
+    .link-featured .link-card-icon {
+      background: rgba(0,255,170,0.1);
+      border-color: rgba(0,255,170,0.3);
+    }
+    .featured-badge {
+      position: absolute;
+      top: -10px;
+      right: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--bg);
+      border: 1px solid rgba(0,255,170,0.3);
+      padding: 0.15rem 0.6rem;
+      border-radius: 4px;
+    }
+    .qr-hint {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+    .copy-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      transition: var(--transition);
+      font-family: var(--font-mono);
+    }
+    .copy-btn:hover { color: var(--accent); background: rgba(0,212,255,0.08); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">Gaspard Danger</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Mon CV</a></li>
+    <li><a href="projets.html">Mes Projets</a></li>
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="interets.html">Intérêts</a></li>
+    <li><a href="liens.html" class="active">Liens utiles</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+
+  <!-- HEADER -->
+  <div style="padding: 3rem 0 2rem;" class="fade-up">
+    <div class="hero-label">Ressources</div>
+    <h1 style="font-family: var(--font-head); font-size: clamp(2rem,5vw,3.5rem); font-weight: 800; color: var(--text-bright); letter-spacing:-0.03em; margin-bottom:0.5rem;">
+      Liens utiles
+    </h1>
+    <p style="color: var(--text-muted); max-width: 500px; line-height:1.7;">
+      Mes profils, mes écoles, mon projet phare et les ressources 
+      associées à mon parcours.
+    </p>
+  </div>
+
+  <!-- MON PROJET -->
+  <section class="links-category fade-up fade-up-1">
+    <div class="links-category-label">⭐ Mon projet phare</div>
+    <div class="links-grid">
+      <a href="https://socratostetedos.github.io/GasPrompt" target="_blank" class="link-card link-featured" style="position:relative;">
+        <div class="featured-badge">Live ✓</div>
+        <div class="link-card-icon">🚀</div>
+        <div>
+          <div class="link-card-title">GasPrompt — Générateur de prompts</div>
+          <div class="link-card-url">socratostetedos.github.io/GasPrompt</div>
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem;">
+            Outil en ligne pour construire des prompts IA structurés et efficaces.
+          </div>
+        </div>
+        <div class="link-card-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- MES PROFILS -->
+  <section class="links-category fade-up fade-up-2">
+    <div class="links-category-label">👤 Mes profils</div>
+    <div class="links-grid">
+      <a href="https://www.linkedin.com/in/gaspard-danger-256091337" target="_blank" class="link-card">
+        <div class="link-card-icon">💼</div>
+        <div>
+          <div class="link-card-title">LinkedIn</div>
+          <div class="link-card-url">linkedin.com/in/gaspard-danger-256091337</div>
+        </div>
+        <div class="link-card-arrow">→</div>
+      </a>
+      <a href="https://gitlab.enssat.fr/Gaspard_Danger" target="_blank" class="link-card">
+        <div class="link-card-icon">🦊</div>
+        <div>
+          <div class="link-card-title">GitLab ENSSAT</div>
+          <div class="link-card-url">gitlab.enssat.fr/Gaspard_Danger</div>
+        </div>
+        <div class="link-card-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- MES ÉCOLES -->
+  <section class="links-category fade-up fade-up-3">
+    <div class="links-category-label">🎓 Mes écoles</div>
+    <div class="links-grid">
+      <a href="https://www.enssat.fr" target="_blank" class="link-card">
+        <div class="link-card-icon">🏛️</div>
+        <div>
+          <div class="link-card-title">ENSSAT — École Nationale Supérieure de Sciences Appliquées et de Technologie</div>
+          <div class="link-card-url">enssat.fr</div>
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem;">
+            Grande école d'ingénieurs — Lannion (22) · Parcours CUPGE
+          </div>
+        </div>
+        <div class="link-card-arrow">→</div>
+      </a>
+      <a href="https://iut-lannion.univ-rennes.fr/reseaux-telecommunications" target="_blank" class="link-card">
+        <div class="link-card-icon">📡</div>
+        <div>
+          <div class="link-card-title">IUT de Lannion — BUT Réseaux &amp; Télécoms</div>
+          <div class="link-card-url">iut-lannion.univ-rennes.fr/reseaux-telecommunications</div>
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem;">
+            BUT R&amp;T · Parcours Cybersécurité — Lannion (22)
+          </div>
+        </div>
+        <div class="link-card-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- RESSOURCES -->
+  <section class="links-category fade-up fade-up-4">
+    <div class="links-category-label">🔗 Ressources &amp; Associations</div>
+    <div class="links-grid">
+      <a href="https://www.ifac.asso.fr/" target="_blank" class="link-card">
+        <div class="link-card-icon">🤝</div>
+        <div>
+          <div class="link-card-title">IFAC — Institut de Formation, d'Animation et de Conseil</div>
+          <div class="link-card-url">ifac.asso.fr</div>
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem;">
+            Association d'accompagnement des jeunes en Loire-Atlantique
+          </div>
+        </div>
+        <div class="link-card-arrow">→</div>
+      </a>
+      <a href="https://www.ssi.gouv.fr/en/secnumacademy/" target="_blank" class="link-card">
+        <div class="link-card-icon">🛡️</div>
+        <div>
+          <div class="link-card-title">ANSSI — SecNumAcadémie</div>
+          <div class="link-card-url">ssi.gouv.fr · SecNumAcadémie</div>
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem;">
+            Plateforme de formation en cybersécurité — Certification obtenue
+          </div>
+        </div>
+        <div class="link-card-arrow">→</div>
+      </a>
+      <a href="https://www.onepoint.fr/" target="_blank" class="link-card">
+        <div class="link-card-icon">☁️</div>
+        <div>
+          <div class="link-card-title">OnePoint</div>
+          <div class="link-card-url">onepoint.fr</div>
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem;">
+            Stage 2026 — Équipe Cloud &amp; Cyber
+          </div>
+        </div>
+        <div class="link-card-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CV DOWNLOAD -->
+  <section class="fade-up" style="margin-bottom: 3rem;">
+    <div class="card" style="text-align:center; padding:3rem 2rem;">
+      <div style="font-size:3rem; margin-bottom:1rem;">📄</div>
+      <h2 style="font-family:var(--font-head); font-size:1.5rem; font-weight:800; color:var(--text-bright); margin-bottom:0.5rem;">
+        Mon CV complet
+      </h2>
+      <p style="color:var(--text-muted); margin-bottom:1.5rem; font-size:0.9rem;">
+        Télécharge mon CV au format PDF pour en savoir plus sur mon parcours.
+      </p>
+      <a href="Gaspard-Danger-CV_alternance.pdf" download class="btn btn-primary" style="font-size:1rem; padding:0.9rem 2rem;">
+        ↓ Télécharger mon CV (PDF)
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Gaspard Danger · Portfolio · <a href="mailto:gaspard.danger@gmail.com">gaspard.danger@gmail.com</a></p>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

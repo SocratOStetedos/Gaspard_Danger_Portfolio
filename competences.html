@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaspard Danger — Compétences</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/logouniv.png">
+  <style>
+    .skills-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 700px) { .skills-layout { grid-template-columns: 1fr; } }
+
+    .skill-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: var(--transition);
+    }
+    .skill-section:hover {
+      border-color: rgba(0,212,255,0.2);
+    }
+    .skill-section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .skill-section-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .icon-blue  { background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.2); }
+    .icon-purple{ background: rgba(108,71,255,0.1); border: 1px solid rgba(108,71,255,0.2); }
+    .icon-green { background: rgba(0,255,170,0.1); border: 1px solid rgba(0,255,170,0.2); }
+    .icon-orange{ background: rgba(255,165,0,0.1); border: 1px solid rgba(255,165,0,0.2); }
+
+    .skill-section-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-bright);
+    }
+    .skill-section-sub {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.1rem;
+    }
+
+    .cert-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .cert-icon { font-size: 1.4rem; }
+    .cert-title {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-bright);
+      font-weight: 600;
+    }
+    .cert-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .lang-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .lang-flag { font-size: 1.5rem; margin-right: 0.5rem; }
+    .lang-name {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-bright);
+    }
+    .lang-level {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      background: rgba(0,212,255,0.08);
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+    }
+    .lang-dots {
+      display: flex;
+      gap: 4px;
+      margin-top: 0.4rem;
+    }
+    .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--border);
+    }
+    .dot.filled { background: var(--accent); box-shadow: 0 0 6px rgba(0,212,255,0.5); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">Gaspard Danger</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Mon CV</a></li>
+    <li><a href="projets.html">Mes Projets</a></li>
+    <li><a href="competences.html" class="active">Compétences</a></li>
+    <li><a href="interets.html">Intérêts</a></li>
+    <li><a href="liens.html">Liens utiles</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+
+  <!-- HEADER -->
+  <div style="padding: 3rem 0 2rem;" class="fade-up">
+    <div class="hero-label">Compétences techniques</div>
+    <h1 style="font-family: var(--font-head); font-size: clamp(2rem,5vw,3.5rem); font-weight: 800; color: var(--text-bright); letter-spacing:-0.03em; margin-bottom:0.5rem;">
+      Mon stack technique
+    </h1>
+    <p style="color: var(--text-muted); max-width: 500px; line-height:1.7;">
+      Compétences acquises en BUT R&amp;T parcours Cybersécurité, 
+      enrichies par des projets pratiques et des certifications.
+    </p>
+  </div>
+
+  <!-- MAIN SKILLS -->
+  <section class="section fade-up fade-up-1">
+    <h2 class="section-title"><span class="section-num">01</span>Compétences Techniques</h2>
+    <div class="skills-layout">
+
+      <!-- Réseau -->
+      <div class="skill-section">
+        <div class="skill-section-header">
+          <div class="skill-section-icon icon-blue">🌐</div>
+          <div>
+            <div class="skill-section-title">Réseaux</div>
+            <div class="skill-section-sub">Network Engineering</div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Configuration routeurs / switchs</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">OSPF / BGP</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">DHCP / Radius / Mail</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">IPv4 / IPv6</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+        <div class="tag-group mt-2">
+          <span class="tag">LAN/WAN</span>
+          <span class="tag">VLAN</span>
+          <span class="tag">Firewall</span>
+          <span class="tag">Téléphonie IP</span>
+          <span class="tag">PABX</span>
+        </div>
+      </div>
+
+      <!-- Cybersécurité -->
+      <div class="skill-section">
+        <div class="skill-section-header">
+          <div class="skill-section-icon icon-green">🔒</div>
+          <div>
+            <div class="skill-section-title">Cybersécurité</div>
+            <div class="skill-section-sub">Security & Pentest</div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Pentest (mode Blackbox)</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Analyse de vulnérabilités</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Hygiène informatique</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">SOC / Détection & Réponse</span><span class="skill-level">Débutant</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:40%"></div></div>
+        </div>
+        <div class="tag-group mt-2">
+          <span class="tag tag-green">ANSSI</span>
+          <span class="tag tag-green">Check SOC</span>
+        </div>
+      </div>
+
+      <!-- Programmation -->
+      <div class="skill-section">
+        <div class="skill-section-header">
+          <div class="skill-section-icon icon-purple">💻</div>
+          <div>
+            <div class="skill-section-title">Programmation</div>
+            <div class="skill-section-sub">Development</div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Python</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">HTML / CSS / JS</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">BASH / PowerShell</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">SQL / PHP / C</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+        </div>
+        <div class="tag-group mt-2">
+          <span class="tag tag-purple">Markdown</span>
+          <span class="tag tag-purple">Git / GitLab</span>
+          <span class="tag tag-purple">VSCode</span>
+        </div>
+      </div>
+
+      <!-- Virtualisation & Systèmes -->
+      <div class="skill-section">
+        <div class="skill-section-header">
+          <div class="skill-section-icon icon-orange">⚙️</div>
+          <div>
+            <div class="skill-section-title">Virtualisation &amp; Systèmes</div>
+            <div class="skill-section-sub">Infra & Cloud</div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">VMWare ESXi</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Docker</span><span class="skill-level">Débutant+</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:45%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Linux / Administration</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Téléphonie IP / PABX</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
+        </div>
+        <div class="tag-group mt-2">
+          <span class="tag">Cloud</span>
+          <span class="tag">Check Infra</span>
+          <span class="tag">Serveur web</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section fade-up fade-up-2">
+    <h2 class="section-title"><span class="section-num">02</span>Certifications &amp; Formations</h2>
+    <div class="cert-card">
+      <div class="cert-icon">🏅</div>
+      <div>
+        <div class="cert-title">Attestation ANSSI — SecNumAcadémie</div>
+        <div class="cert-desc">Agence Nationale de la Sécurité des Systèmes d'Information · Hygiène informatique avancée</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">☁️</div>
+      <div>
+        <div class="cert-title">Stage OnePoint — Cloud &amp; Cyber</div>
+        <div class="cert-desc">Outillage Cyber détection &amp; réponse — Check Infra / Check SOC · (à venir, avril 2026)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUES -->
+  <section class="section fade-up fade-up-3">
+    <h2 class="section-title"><span class="section-num">03</span>Langues</h2>
+    <div class="two-col">
+      <div class="skill-section">
+        <div class="lang-row">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span class="lang-flag">🇫🇷</span>
+            <div>
+              <div class="lang-name">Français</div>
+              <div class="lang-dots">
+                <div class="dot filled"></div><div class="dot filled"></div>
+                <div class="dot filled"></div><div class="dot filled"></div>
+                <div class="dot filled"></div>
+              </div>
+            </div>
+          </div>
+          <span class="lang-level">Natif · C2</span>
+        </div>
+        <p style="font-size:0.82rem; color:var(--text-muted);">Langue maternelle</p>
+      </div>
+      <div class="skill-section">
+        <div class="lang-row">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span class="lang-flag">🇬🇧</span>
+            <div>
+              <div class="lang-name">Anglais</div>
+              <div class="lang-dots">
+                <div class="dot filled"></div><div class="dot filled"></div>
+                <div class="dot filled"></div><div class="dot filled"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+          <span class="lang-level">B1 – B2</span>
+        </div>
+        <p style="font-size:0.82rem; color:var(--text-muted);">Réalisation d'un mini-film · Simulations professionnelles · Ted Talk</p>
+      </div>
+      <div class="skill-section">
+        <div class="lang-row">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span class="lang-flag">🇩🇪</span>
+            <div>
+              <div class="lang-name">Allemand</div>
+              <div class="lang-dots">
+                <div class="dot filled"></div><div class="dot"></div>
+                <div class="dot"></div><div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+          <span class="lang-level">A1 — Débutant</span>
+        </div>
+        <p style="font-size:0.82rem; color:var(--text-muted);">Bases scolaires — lu, parlé, écrit</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFT SKILLS -->
+  <section class="section fade-up fade-up-4">
+    <h2 class="section-title"><span class="section-num">04</span>Savoir-être</h2>
+    <div class="three-col">
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">🎯</div>
+        <div style="font-family:var(--font-head); font-weight:700; color:var(--text-bright); margin-bottom:0.35rem;">Persévérance</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">Développée par la musculation et les sports d'endurance</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">🤝</div>
+        <div style="font-family:var(--font-head); font-weight:700; color:var(--text-bright); margin-bottom:0.35rem;">Esprit d'équipe</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">Football, travaux de groupe, animation IFAC</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">♟️</div>
+        <div style="font-family:var(--font-head); font-weight:700; color:var(--text-bright); margin-bottom:0.35rem;">Logique &amp; Anticipation</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">Passion des échecs — pensée stratégique</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">⏰</div>
+        <div style="font-family:var(--font-head); font-weight:700; color:var(--text-bright); margin-bottom:0.35rem;">Ponctualité</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">Rigueur et respect des deadlines</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">📋</div>
+        <div style="font-family:var(--font-head); font-weight:700; color:var(--text-bright); margin-bottom:0.35rem;">Gestion de projet</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">Planification, priorisation, livraison</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">💡</div>
+        <div style="font-family:var(--font-head); font-weight:700; color:var(--text-bright); margin-bottom:0.35rem;">Curiosité technique</div>
+        <div style="font-size:0.82rem; color:var(--text-muted);">Veille technologique constante</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Gaspard Danger · Portfolio · <a href="mailto:gaspard.danger@gmail.com">gaspard.danger@gmail.com</a></p>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaspard Danger — Projets</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/logouniv.png">
+  <style>
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      border-color: rgba(0, 212, 255, 0.3);
+      box-shadow: var(--glow);
+      transform: translateY(-4px);
+    }
+
+    .project-card-num {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.15em;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card-title {
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .project-card-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+
+    .preview-frame {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 480px;
+      margin-top: 2rem;
+      position: relative;
+      background: var(--surface2);
+    }
+
+    .preview-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .preview-label {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      background: rgba(7, 9, 15, 0.85);
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a class="nav-brand" href="index.html">Gaspard Danger</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Mon CV</a></li>
+      <li><a href="projets.html" class="active">Mes Projets</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="interets.html">Intérêts</a></li>
+      <li><a href="liens.html">Liens utiles</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+
+    <!-- HERO -->
+    <div style="padding: 3rem 0 2rem;">
+      <div class="hero-label">Projets</div>
+      <h1
+        style="font-family: var(--font-head); font-size: clamp(2rem,5vw,3.5rem); font-weight: 800; color: var(--text-bright); letter-spacing:-0.03em; margin-bottom:0.5rem;">
+        Ce que je construis
+      </h1>
+      <p style="color: var(--text-muted); max-width: 560px; line-height:1.7;">
+        Projets académiques et personnels réalisés dans le cadre de mon BUT R&amp;T
+        et de ma formation à l'ENSSAT.
+      </p>
+    </div>
+
+    <!-- FEATURED PROJECT -->
+    <section class="section fade-up">
+      <h2 class="section-title"><span class="section-num">⭐</span>Projet Phare</h2>
+
+      <div class="project-featured">
+        <div class="project-badge">Projet live · En ligne</div>
+        <div class="project-title">GasPrompt</div>
+        <p class="project-desc">
+          Générateur de prompts intelligent pour optimiser les interactions avec les IA génératives.
+          Conçu pour aider les utilisateurs à formuler des requêtes précises et efficaces,
+          GasPrompt guide pas-à-pas dans la construction de prompts structurés et performants.
+        </p>
+        <div class="tag-group" style="margin-bottom: 1.5rem;">
+          <span class="tag tag-green">HTML/CSS</span>
+          <span class="tag tag-green">JavaScript</span>
+          <span class="tag tag-green">GitHub Pages</span>
+          <span class="tag">IA Générative</span>
+          <span class="tag">UX Design</span>
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap:wrap;">
+          <a href="https://socratostetedos.github.io/GasPrompt" target="_blank" class="btn btn-primary">
+            🚀 Voir le projet en ligne
+          </a>
+        </div>
+
+        <!-- Preview iframe -->
+        <div class="preview-frame">
+          <div class="preview-label">Aperçu live</div>
+          <iframe src="https://socratostetedos.github.io/GasPrompt" title="GasPrompt Preview" loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER PROJECTS -->
+    <section class="section fade-up fade-up-2">
+      <h2 class="section-title"><span class="section-num">02</span>Autres Projets</h2>
+      <div class="project-grid">
+
+        <div class="project-card">
+          <div class="project-card-num">PROJET #02 · Réseau</div>
+          <div class="project-card-title">Infrastructure Réseau LAN/WAN</div>
+          <p class="project-card-desc">
+            Conception et déploiement d'une infrastructure réseau complète avec LAN privés et publics.
+            Configuration DHCP, OSPF, BGP, serveur Radius et pare-feu.
+            Intégration de protocoles de routage dynamique et de sécurité avancée.
+          </p>
+          <div class="tag-group">
+            <span class="tag">OSPF</span>
+            <span class="tag">BGP</span>
+            <span class="tag">DHCP</span>
+            <span class="tag">Radius</span>
+            <span class="tag">IPv4/6</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-num">PROJET #03 · Développement Web</div>
+          <div class="project-card-title">Serveur Web Sécurisé</div>
+          <p class="project-card-desc">
+            Développement d'un serveur web sécurisé complet avec gestion de bases de données SQL.
+            Back-end en PHP, base de données MySQL, front-end HTML/CSS/JavaScript,
+            avec authentification et sessions sécurisées.
+          </p>
+          <div class="tag-group">
+            <span class="tag tag-purple">PHP</span>
+            <span class="tag tag-purple">SQL</span>
+            <span class="tag tag-purple">HTML/CSS</span>
+            <span class="tag tag-purple">Java</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-num">PROJET #04 · Cybersécurité</div>
+          <div class="project-card-title">Pentest Blackbox</div>
+          <p class="project-card-desc">
+            Test d'intrusion en mode Blackbox : analyse de vulnérabilités et compromission contrôlée
+            d'un système cible. Rapport de sécurité avec recommandations et plans de remédiation.
+            Réalisé dans le cadre du Hack'in Trégor.
+          </p>
+          <div class="tag-group">
+            <span class="tag tag-green">Pentest</span>
+            <span class="tag tag-green">Blackbox</span>
+            <span class="tag tag-green">ANSSI</span>
+            <span class="tag">Hack'in Trégor</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-num">PROJET #05 · Programmation</div>
+          <div class="project-card-title">Memory Game — Python</div>
+          <p class="project-card-desc">
+            Création d'un jeu de memory complet en Python. Conception d'algorithmes de gestion
+            du jeu, interface graphique et présentation de la solution technique devant jury.
+            Projet de 1re année BUT.
+          </p>
+          <div class="tag-group">
+            <span class="tag">Python</span>
+            <span class="tag">Algorithmes</span>
+            <span class="tag">GUI</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-num">PROJET #06 · Portfolio</div>
+          <div class="project-card-title">Ce Portfolio !</div>
+          <p class="project-card-desc">
+            Portfolio web personnel en pur HTML/CSS/JavaScript, sans framework.
+            Design dark-tech custom, responsive et entièrement codé à la main
+            pour mettre en valeur mon profil pour ma recherche d'alternance.
+          </p>
+          <div class="tag-group">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Design</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OBJECTIF CARRIÈRE -->
+    <section class="section fade-up fade-up-3">
+      <h2 class="section-title"><span class="section-num">03</span>Objectif de carrière</h2>
+      <div class="card">
+        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text);">
+          Mon objectif est de devenir <strong style="color: var(--text-bright);">ingénieur informatique</strong>,
+          en particulier dans le domaine des <strong style="color: var(--accent);">réseaux, de la cybersécurité</strong>
+          et/ou des systèmes embarqués. Mon parcours idéal serait de rejoindre une entreprise leader
+          comme <strong style="color: var(--text-bright);">Thales</strong> ou <strong
+            style="color: var(--text-bright);">OnePoint</strong>,
+          où je pourrais contribuer à des projets innovants dans des domaines critiques tels que
+          l'aérospatiale, la défense ou la sécurité. Je suis passionné par la résolution de
+          problèmes complexes et l'optimisation de systèmes à grande échelle.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Gaspard Danger · Portfolio · <a href="mailto:gaspard.danger@gmail.com">gaspard.danger@gmail.com</a></p>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+
+</html>
